@@ -35,7 +35,7 @@ const HeroSlider = () => {
                     gamesData.map((item) => <SwiperSlide key={item.id}><SliderCard item={item} /></SwiperSlide>)
                 }
             </Swiper>
-            <div className='customize__navigation absolute bottom-7 right-3 text-3xl font-light text-[#2e2e2e] z-50'>
+            <div className='customize__navigation absolute bottom-7 right-3 text-3xl font-light text-[#2e2e2e] z-20'>
                 <button onClick={() => swiperRef.current?.slidePrev()}><FaRegCaretSquareLeft /></button>
                 <button onClick={() => swiperRef.current?.slideNext()}><FaRegCaretSquareRight /></button>
             </div>

@@ -10,7 +10,7 @@ const Navber = () => {
             <div className="w-[70%]">
                 <form action="w-full">
                     <div className='relative'>
-                        <input type="text" placeholder="Search 860,872 games" className="input input-bordered w-full bg-inherit border-2 border-slate-500" />
+                        <input type="text" placeholder="Search 860,872 games" className="input text-slate-900 input-bordered w-full  border-2 backdrop-blur-xl bg-white/5" />
                         <button>
                             <span className='absolute top-[50%] right-[1%] translate-x-[-0%] translate-y-[-50%]'>
                                 <IoSearch size={25} />
