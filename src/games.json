@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "name": "The Witcher 3: Wild Hunt",
+      "description": "An open-world action role-playing game with a gripping narrative.",
+      "rating": 4.9,
+      "price": 39.99,
+      "image":"https://www.cdprojekt.com/en/wp-content/uploads-en/2022/11/fhimqstx0aymfdb-1024x576.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Red Dead Redemption 2",
+      "description": "A Western-themed action-adventure game set in an expansive open world.",
+      "rating": 4.8,
+      "price": 49.99,
+      "image":"https://www.hollywoodreporter.com/wp-content/uploads/2018/09/red_dead_redemption_2_-_publicity_-_h_2018.jpg?w=1296"
+    },
+    {
+      "id": 3,
+      "name": "Cyberpunk 2077",
+      "description": "A futuristic open-world role-playing game with a branching narrative.",
+      "rating": 4.5,
+      "price": 59.99,
+      "image":"https://cdn.vox-cdn.com/thumbor/ZgKSIaVSb_cCjvXIJt27irjp19M=/0x0:3840x2160/2400x1356/filters:focal(2267x880:2268x881)/cdn.vox-cdn.com/uploads/chorus_asset/file/20053035/Cyberpunk_2077_screen_10.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Assassin's Creed Valhalla",
+      "description": "Embark on a Viking adventure in this action role-playing game.",
+      "rating": 4.7,
+      "price": 54.99,
+      "image":"https://i.ytimg.com/vi/U72mU9Iq8eQ/maxresdefault.jpg"
+    },
+    {
+      "id": 5,
+      "name": "FIFA 22",
+      "description": "Experience the latest installment in the popular football simulation series.",
+      "rating": 4.6,
+      "price": 59.99,
+      "image":"https://www.gameinformer.com/sites/default/files/styles/full/public/2021/09/25/9b64ccad/fifa221.jpg"
+    },
+    {
+      "id": 6,
+      "name": "The Legend of Zelda: Breath of the Wild",
+      "description": "An action-adventure game in a vast open world with a focus on exploration.",
+      "rating": 4.9,
+      "price": 59.99,
+      "image":"https://i.ytimg.com/vi/GY4WjuVTdvY/maxresdefault.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Doom Eternal",
+      "description": "A fast-paced first-person shooter with intense combat against demonic forces.",
+      "rating": 4.8,
+      "price": 44.99,
+      "image":"https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_DoomEternal.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Minecraft",
+      "description": "A sandbox game that allows players to build and explore virtual worlds.",
+      "rating": 4.7,
+      "price": 29.99,
+      "image":"https://oyster.ignimgs.com/mediawiki/apis.ign.com/minecraft/c/c7/Trails_And_Tales_Header.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Star Wars Jedi: Fallen Order",
+      "description": "Embark on a journey as a young Jedi in this action-adventure game.",
+      "rating": 4.6,
+      "price": 49.99,
+      "image":"https://i.ytimg.com/vi/TtyoXez8ncU/maxresdefault.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Spider-Man: Miles Morales",
+      "description": "Swing through the city as Miles Morales in this superhero action-adventure game.",
+      "rating": 4.5,
+      "price": 39.99,
+      "image":"https://techcult.com/wp-content/uploads/2023/03/Will-Spider-Man-Miles-Morales-Be-On-Xbox.png"
+    }
+]
+  
