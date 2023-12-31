@@ -1,29 +1,12 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { FaFire } from "react-icons/fa";
-import CharacterPng1 from "../../assets//character1.png";
-import Game1 from "../../assets/game1.jpg";
-import Game2 from "../../assets/game2.jpg";
-import Game3 from "../../assets/game3.jpg";
+import CharacterPng1 from "../../../assets/character3.png";
+import Game1 from "../../../assets/game1.jpg";
+import Game2 from "../../../assets/game2.jpg";
+import Game3 from "../../../assets/game3.jpg";
 
 const GameCardData = [
-    {
-        id: 1,
-        title: "Game Title",
-        image: Game1,
-        followers: 30,
-    },
-    {
-        id: 2,
-        title: "Game Title",
-        image: Game2,
-        followers: 35,
-    },
-    {
-        id: 3,
-        title: "Game Title2",
-        image: Game3,
-        followers: 35,
-    },
     {
         id: 4,
         title: "Game Title3",
@@ -43,14 +26,14 @@ const GameCardData = [
         followers: 55,
     },
 ];
-const TrendingGame = () => {
+const RecentPlay = () => {
     return (
         <>
             <section className="py-10 px-10 bg-primary text-white">
                 <div className="container relative">
                     {/* Header section */}
                     <div className="flex justify-between">
-                        <h1 className="text-3xl font-bold">Currently Trending Games</h1>
+                        <h1 className="text-3xl font-bold font-serif">Recent Played Games</h1>
                         <button className="bg-gray-400/50 text-white rounded-xl px-4 py-2">
                             View All
                         </button>
@@ -92,4 +75,4 @@ const TrendingGame = () => {
     );
 };
 
-export default TrendingGame;
+export default RecentPlay;

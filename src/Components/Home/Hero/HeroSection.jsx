@@ -4,7 +4,7 @@ import HeroSlider from './HeroSlider/HeroSlider';
 
 const HeroSection = () => {
     return (
-        <div className='bg-primary/80 bg-gradient-to-b from-primary from-10% to-transparent to-90%'>
+        <div className=''>
             <HeroSlider />
         </div>
     );
