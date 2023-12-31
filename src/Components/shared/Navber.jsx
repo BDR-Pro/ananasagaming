@@ -6,7 +6,9 @@ import logo from '../../assets/react.svg';
 const Navber = () => {
     return (
         <div className="flex justify-between items-center pr-3 fixed z-50 w-full backdrop-blur-xl bg-white/30">
-            <img src={logo} alt="" width={150} height={150} />
+            <Link to="/">
+                <img src={logo} alt="" width={150} height={150} />
+            </Link>
             <div className="w-[70%]">
                 <form action="w-full">
                     <div className='relative'>

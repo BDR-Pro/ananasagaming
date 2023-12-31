@@ -128,7 +128,28 @@
             "review":"pleaser",
             "image":"https://creazilla-store.fra1.digitaloceanspaces.com/icons/7912642/avatar-icon-md.png",
             "rating":5
+        }
+    ],
+    "trending":
+    [
+        {
+            "id":1,
+            "image":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggR_osHo1GMnD7IKSOT-ln39RG7mV7nDCJTAil_CH-8godUgi9cQw7Cy7jp8_ZQp1XJ8YcqK-hpMvGAiV00ytXGjNlDka7qtL1bBKUhkR4JR5NQ2EHBIrczAB1IMjwDGmgLBA8Yp7-PyElRywcVFiWl3CxcvSlPWiqyCyoOINgYEJbO7ob9Vv6i6om/s1920/free-fire-free-printable-posters-003.jpg",
+            "title":"Gametitle1",
+            "followers":35
         },
+        {
+            "id":2,
+            "image":"https://c4.wallpaperflare.com/wallpaper/521/942/405/5bd06052e63a0-wallpaper-preview.jpg",
+            "title":"Gametitle2",
+            "followers":45
+        },
+        {
+            "id":3,
+            "image":"https://giftkad.com/wp-content/uploads/2021/12/PUBG_02.jpg",
+            "title":"Gametitle3",
+            "followers":25
+        }
     ]
   
 }
