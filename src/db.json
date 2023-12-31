@@ -136,60 +136,70 @@
             "id":1,
             "image":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggR_osHo1GMnD7IKSOT-ln39RG7mV7nDCJTAil_CH-8godUgi9cQw7Cy7jp8_ZQp1XJ8YcqK-hpMvGAiV00ytXGjNlDka7qtL1bBKUhkR4JR5NQ2EHBIrczAB1IMjwDGmgLBA8Yp7-PyElRywcVFiWl3CxcvSlPWiqyCyoOINgYEJbO7ob9Vv6i6om/s1920/free-fire-free-printable-posters-003.jpg",
             "title":"Gametitle1",
+            "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla porro libero voluptates corrupti, dolore qui ducimus dignissimos voluptate ullam mollitia molestias architecto aliquam animi natus accusantium sequi deleniti voluptatem nisi!",
             "followers":35
         },
         {
             "id":2,
             "image":"https://c4.wallpaperflare.com/wallpaper/521/942/405/5bd06052e63a0-wallpaper-preview.jpg",
             "title":"Gametitle2",
+            "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla porro libero voluptates corrupti, dolore qui ducimus dignissimos voluptate ullam mollitia molestias architecto aliquam animi natus accusantium sequi deleniti voluptatem nisi!",
             "followers":45
         },
         {
             "id":3,
             "image":"https://giftkad.com/wp-content/uploads/2021/12/PUBG_02.jpg",
             "title":"Gametitle3",
+            "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla porro libero voluptates corrupti, dolore qui ducimus dignissimos voluptate ullam mollitia molestias architecto aliquam animi natus accusantium sequi deleniti voluptatem nisi!",
             "followers":25
         },
         {
             "id":4,
             "image":"https://www.nintenderos.com/wp-content/uploads/2023/08/Little-Nightmares-III-Cropped-1200x900.jpg",
             "title":"Gametitle4",
+            "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla porro libero voluptates corrupti, dolore qui ducimus dignissimos voluptate ullam mollitia molestias architecto aliquam animi natus accusantium sequi deleniti voluptatem nisi!",
             "followers":55
         },
         {
             "id":5,
             "image":"https://cdn.europosters.eu/image/750/posters/titanfall-2-cover-i31916.jpg",
             "title":"Gametitle5",
+            "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla porro libero voluptates corrupti, dolore qui ducimus dignissimos voluptate ullam mollitia molestias architecto aliquam animi natus accusantium sequi deleniti voluptatem nisi!",
             "followers":55
         },
         {
             "id":6,
             "image":"https://rukminim2.flixcart.com/image/850/1000/poster/y/z/5/medium-andph309-ananyadesigns-assassin-s-creed-rogue-wall-poster-original-imae8afz6wzuzvhf.jpeg?q=90",
             "title":"Gametitle5",
+            "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla porro libero voluptates corrupti, dolore qui ducimus dignissimos voluptate ullam mollitia molestias architecto aliquam animi natus accusantium sequi deleniti voluptatem nisi!",
             "followers":55
         },
         {
             "id":7,
             "image":"https://miro.medium.com/v2/resize:fit:960/0*za3iBIykc7S5tnab.jpg",
             "title":"Gametitle5",
+            "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla porro libero voluptates corrupti, dolore qui ducimus dignissimos voluptate ullam mollitia molestias architecto aliquam animi natus accusantium sequi deleniti voluptatem nisi!",
             "followers":95
         },
         {
             "id":8,
             "image":"https://static.independent.co.uk/2022/09/30/09/3z97ek19-1920.jpg?width=1200&height=900&fit=crop",
             "title":"Gametitle8",
+            "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla porro libero voluptates corrupti, dolore qui ducimus dignissimos voluptate ullam mollitia molestias architecto aliquam animi natus accusantium sequi deleniti voluptatem nisi!",
             "followers":95
         },
         {
             "id":9,
             "image":"https://store-images.s-microsoft.com/image/apps.32034.68565266983380288.0f5ef871-88c0-45f7-b108-6aacbc041fcf.9b094362-c51d-49e5-9e92-80710c585fca?q=90&w=256&h=384&mode=crop&format=jpg&background=%230078D7",
             "title":"Gametitle8",
+            "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla porro libero voluptates corrupti, dolore qui ducimus dignissimos voluptate ullam mollitia molestias architecto aliquam animi natus accusantium sequi deleniti voluptatem nisi!",
             "followers":95
         },
         {
             "id":10,
             "image":"https://w0.peakpx.com/wallpaper/631/953/HD-wallpaper-dead-island-2-2012-popular-game-s-thumbnail.jpg",
             "title":"Gametitle10",
+            "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla porro libero voluptates corrupti, dolore qui ducimus dignissimos voluptate ullam mollitia molestias architecto aliquam animi natus accusantium sequi deleniti voluptatem nisi!",
             "followers":95
         }
     ]

@@ -8,7 +8,14 @@ import useDataFetcher from "../../../hook/useDataFetcher";
 const TrendingGame = () => {
     const { data, error, loading } = useDataFetcher("http://localhost:5000/trending")
     if (loading) {
-        return <p>Loading...</p>;
+        return (
+            <div className="flex flex-col gap-4 w-52">
+                <div className="skeleton h-32 w-full"></div>
+                <div className="skeleton h-4 w-28"></div>
+                <div className="skeleton h-4 w-full"></div>
+                <div className="skeleton h-4 w-full"></div>
+            </div>
+        );
     }
 
     if (error) {
