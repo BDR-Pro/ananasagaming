@@ -89,7 +89,8 @@
             "gameId":1,
             "title":"Gametitle1",
             "name":"John",
-            "image":"../../../ANANASA/ananasa/src/assets/game1.jpg",
+            "review":"good game",
+            "image":"https://creazilla-store.fra1.digitaloceanspaces.com/icons/7912642/avatar-icon-md.png",
             "rating":4.5
         },
         {   
@@ -97,7 +98,8 @@
             "gameId":4,
             "title":"Gametitle2",
             "name":"Dow",
-            "image":"../../../ANANASA/ananasa/src/assets/game1.jpg",
+            "review":"nice graphics",
+            "image":"https://creazilla-store.fra1.digitaloceanspaces.com/icons/7912642/avatar-icon-md.png",
             "rating":4.5
         },
         {   
@@ -105,7 +107,8 @@
             "gameId":4,
             "title":"Gametitle3",
             "name":"Cordova",
-            "image":"../../../ANANASA/ananasa/src/assets/game1.jpg",
+            "review":"overall average",
+            "image":"https://creazilla-store.fra1.digitaloceanspaces.com/icons/7912642/avatar-icon-md.png",
             "rating":4.5
         },
         {   
@@ -113,9 +116,19 @@
             "gameId":1,
             "title":"Gametitle4",
             "name":"Lilly",
-            "image":"../../../ANANASA/ananasa/src/assets/game1.jpg",
+            "review":"pleaser",
+            "image":"https://creazilla-store.fra1.digitaloceanspaces.com/icons/7912642/avatar-icon-md.png",
             "rating":5
-        }
+        },
+        {   
+            "id":5,
+            "gameId":1,
+            "title":"Gametitle5",
+            "name":"Dolly",
+            "review":"pleaser",
+            "image":"https://creazilla-store.fra1.digitaloceanspaces.com/icons/7912642/avatar-icon-md.png",
+            "rating":5
+        },
     ]
   
 }

@@ -3,31 +3,17 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import CharacterPng1 from "../../../assets/character3.png";
-import Game1 from "../../../assets/game1.jpg";
-import Game2 from "../../../assets/game2.jpg";
-import Game3 from "../../../assets/game3.jpg";
+import useDataFetcher from "../../../hook/useDataFetcher";
 
-const GameCardData = [
-    {
-        id: 4,
-        title: "Game Title3",
-        image: Game1,
-        rating: 3.5,
-    },
-    {
-        id: 5,
-        title: "Game Title4",
-        image: Game2,
-        rating: 4.5,
-    },
-    {
-        id: 6,
-        title: "Game Title5",
-        image: Game3,
-        rating: 5,
-    },
-];
 const StreamerReview = () => {
+    const { data: reviews, error, loading } = useDataFetcher("http://localhost:5000/reviews");
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+        return <p>Error: {error.message}</p>;
+    }
     return (
         <>
             <section className="py-10 px-10 bg-primary text-white">
@@ -41,20 +27,21 @@ const StreamerReview = () => {
                     </div>
                     {/* Trending Games Card section */}
                     <div className="relative z-10">
-                        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mt-8">
+                        <div className="grid grid-cols-1 md:grid-cols-6 gap-1 mt-8">
                             {/* Game Card */}
-                            {GameCardData.map((item) => {
+                            {reviews.slice(0, 4).map((item) => {
                                 const fullStars = Math.floor(item.rating);
                                 const decimalPart = item.rating - fullStars;
                                 return (
-                                    <div className="" key={item.id}>
+                                    <div className="flex flex-col items-center justify-center" key={item.id}>
                                         <img
                                             src={item.image}
                                             alt={item.title}
-                                            className="w-[200px] h-[200px] object-cover rounded-full"
+                                            className="w-[150px] h-[150px] object-cover rounded-full"
                                         />
                                         <div className="text-center">
-                                            <p>{item.title}</p>
+                                            <p>{item.name}</p>
+                                            <p>{item.review}</p>
                                             <p className="flex items-center justify-center gap-2">
                                                 <ul className="flex gap-1">
                                                     {/* Full stars */}
