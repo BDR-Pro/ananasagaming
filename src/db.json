@@ -89,6 +89,7 @@
             "gameId":1,
             "title":"Gametitle1",
             "name":"John",
+            "image":"../../../ANANASA/ananasa/src/assets/game1.jpg",
             "rating":4.5
         },
         {   
@@ -96,6 +97,7 @@
             "gameId":4,
             "title":"Gametitle2",
             "name":"Dow",
+            "image":"../../../ANANASA/ananasa/src/assets/game1.jpg",
             "rating":4.5
         },
         {   
@@ -103,6 +105,7 @@
             "gameId":4,
             "title":"Gametitle3",
             "name":"Cordova",
+            "image":"../../../ANANASA/ananasa/src/assets/game1.jpg",
             "rating":4.5
         },
         {   
@@ -110,6 +113,7 @@
             "gameId":1,
             "title":"Gametitle4",
             "name":"Lilly",
+            "image":"../../../ANANASA/ananasa/src/assets/game1.jpg",
             "rating":5
         }
     ]

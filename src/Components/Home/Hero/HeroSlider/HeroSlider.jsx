@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { FaRegCaretSquareLeft, FaRegCaretSquareRight } from 'react-icons/fa';
 
 import 'swiper/css';
@@ -7,24 +7,22 @@ import 'swiper/css/effect-fade';
 import "swiper/css/navigation";
 import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import useDataFetcher from '../../../../hook/useDataFetcher';
 import SliderCard from './../SliderCard';
 
 
 const HeroSlider = () => {
     const swiperRef = useRef();
-    const [gamesData, setData] = useState([]);
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await fetch("http://localhost:5000/games");
-                const data = await res.json();
-                setData(data);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        fetchData();
-    }, []);
+    const { data: gamesData, loading, error } = useDataFetcher("http://localhost:5000/games");
+
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+        return <p>Error: {error.message}</p>;
+    }
+
     return (
         <div className='relative'>
             <Swiper
