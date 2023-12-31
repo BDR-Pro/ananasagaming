@@ -2,6 +2,7 @@
 import React from 'react';
 import HeroSection from '../../Components/Home/Hero/HeroSection';
 import RecentPlay from '../../Components/Home/RecentPlay/RecentPlay';
+import StreamerReview from '../../Components/Home/Review/StreamerReview';
 import TrendingGame from '../../Components/Home/TrendingGame/TrendingGame';
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
             <HeroSection />
             <RecentPlay />
             <TrendingGame />
+            <StreamerReview />
         </div>
     )
 };

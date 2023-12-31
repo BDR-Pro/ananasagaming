@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import { FaFire } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
+import { FaRegStarHalfStroke } from "react-icons/fa6";
 import CharacterPng1 from "../../../assets/character3.png";
 import Game1 from "../../../assets/game1.jpg";
 import Game2 from "../../../assets/game2.jpg";
@@ -11,29 +12,29 @@ const GameCardData = [
         id: 4,
         title: "Game Title3",
         image: Game1,
-        followers: 35,
+        rating: 3.5,
     },
     {
         id: 5,
         title: "Game Title4",
         image: Game2,
-        followers: 35,
+        rating: 4.5,
     },
     {
         id: 6,
         title: "Game Title5",
         image: Game3,
-        followers: 55,
+        rating: 5,
     },
 ];
-const RecentPlay = () => {
+const StreamerReview = () => {
     return (
         <>
             <section className="py-10 px-10 bg-primary text-white">
                 <div className="container relative">
                     {/* Header section */}
                     <div className="flex justify-between">
-                        <h1 className="text-3xl font-bold font-serif">Recent Played Games</h1>
+                        <h1 className="text-3xl font-bold font-serif">Reviews For The Streamer</h1>
                         <button className="bg-gray-400/50 text-white rounded-xl px-4 py-2">
                             View All
                         </button>
@@ -43,18 +44,36 @@ const RecentPlay = () => {
                         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mt-8">
                             {/* Game Card */}
                             {GameCardData.map((item) => {
+                                const fullStars = Math.floor(item.rating);
+                                const decimalPart = item.rating - fullStars;
                                 return (
                                     <div className="" key={item.id}>
                                         <img
                                             src={item.image}
                                             alt={item.title}
-                                            className="w-full h-[200px] object-cover rounded-xl"
+                                            className="w-[200px] h-[200px] object-cover rounded-full"
                                         />
                                         <div className="text-center">
                                             <p>{item.title}</p>
                                             <p className="flex items-center justify-center gap-2">
-                                                <FaFire />
-                                                <span>{item.followers}</span> followers
+                                                <ul className="flex gap-1">
+                                                    {/* Full stars */}
+                                                    {Array.from({ length: fullStars }, (_, index) => (
+                                                        <li key={index}>
+                                                            <span>
+                                                                <FaStar />
+                                                            </span>
+                                                        </li>
+                                                    ))}
+                                                    {/* Partial star for decimal rating */}
+                                                    {decimalPart > 0 && (
+                                                        <li>
+                                                            <span style={{ width: `${decimalPart * 100}%` }}>
+                                                                <FaRegStarHalfStroke />
+                                                            </span>
+                                                        </li>
+                                                    )}
+                                                </ul>
                                             </p>
                                         </div>
                                     </div>
@@ -75,4 +94,4 @@ const RecentPlay = () => {
     );
 };
 
-export default RecentPlay;
+export default StreamerReview;
