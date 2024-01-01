@@ -2,20 +2,21 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { MdStar } from "react-icons/md";
+import { Link } from 'react-router-dom';
 const GameDetailsCard = ({ singleData }) => {
-    const { image, title, description } = singleData;
+    const { image, title, description, genra } = singleData;
     return (
         <div className="card max-w-5xl mx-auto bg-base-100 shadow-xl">
             <figure><img src={image} alt="Shoes" className='w-full h-[400px] object-cover' /></figure>
             <div className="card-body">
                 <h2 className="card-title">
                     {title}
-                    <div className="badge badge-secondary">NEW</div>
+                    <div className="badge badge-secondary"><Link to="#">{genra}</Link></div>
                 </h2>
                 <p>{description}</p>
                 <div className="card-actions">
-                    <div className="badge badge-outline">Run The Game</div>
-                    <div className="badge badge-outline">Favorite</div>
+                    <div className="badge badge-outline"><Link to="#">Run The Game</Link></div>
+                    <div className="badge badge-outline"><Link to="#">Favorite</Link></div>
                 </div>
             </div>
             <div className="px-5 pb-10">
