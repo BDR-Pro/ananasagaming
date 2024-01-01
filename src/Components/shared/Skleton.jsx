@@ -1,0 +1,15 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+
+const Skleton = () => {
+    return (
+        <div className="flex flex-col gap-4 w-52 mt-2">
+            <div className="skeleton h-32 w-full"></div>
+            <div className="skeleton h-4 w-28"></div>
+            <div className="skeleton h-4 w-full"></div>
+            <div className="skeleton h-4 w-full"></div>
+        </div>
+    );
+};
+
+export default Skleton;

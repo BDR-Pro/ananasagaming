@@ -4,22 +4,34 @@ import { FaFire } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import CharacterPng1 from "../../../assets/character1.png";
 import useDataFetcher from "../../../hook/useDataFetcher";
+import Skleton from "../../shared/Skleton";
 
 const TrendingGame = () => {
     const { data, error, loading } = useDataFetcher("http://localhost:5000/trending")
     if (loading) {
         return (
-            <div className="flex flex-col gap-4 w-52">
-                <div className="skeleton h-32 w-full"></div>
-                <div className="skeleton h-4 w-28"></div>
-                <div className="skeleton h-4 w-full"></div>
-                <div className="skeleton h-4 w-full"></div>
+            <div className="flex gap-2 justify-evenly my-5 mx-4">
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
             </div>
         );
     }
 
     if (error) {
-        return <p>Error: {error.message}</p>;
+        return (
+            <div className="flex gap-2 justify-evenly my-5 mx-4">
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+            </div>
+        );
     }
     return (
         <>

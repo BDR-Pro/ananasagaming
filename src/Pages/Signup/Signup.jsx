@@ -7,8 +7,8 @@ const SignUp = () => {
 
 
     return (
-        <div className='h-[800px] flex justify-center items-center bg-blue-950'>
-            <div className='w-96 p-7 border-2 backdrop-blur-xl bg-white/75'>
+        <div className='h-[800px] flex justify-center items-center bg-primary'>
+            <div className='w-96 p-7 border-2 backdrop-blur-xl bg-white/75 rounded-lg'>
                 <h2 className='text-xl text-center'>Sign Up</h2>
                 <form>
                     <div className="form-control w-full max-w-xs">

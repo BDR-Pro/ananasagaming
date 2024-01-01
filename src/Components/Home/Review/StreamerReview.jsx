@@ -4,15 +4,30 @@ import { FaStar } from "react-icons/fa";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import CharacterPng1 from "../../../assets/character3.png";
 import useDataFetcher from "../../../hook/useDataFetcher";
+import ReviewSkeleton from "../../shared/ReviewSkeleton";
 
 const StreamerReview = () => {
     const { data: reviews, error, loading } = useDataFetcher("http://localhost:5000/reviews");
     if (loading) {
-        return <p>Loading...</p>;
+        return (
+            <div className="flex gap-2 justify-evenly my-5 mx-4">
+                <ReviewSkeleton />
+                <ReviewSkeleton />
+                <ReviewSkeleton />
+                <ReviewSkeleton />
+            </div>
+        );
     }
 
     if (error) {
-        return <p>Error: {error.message}</p>;
+        return (
+            <div className="flex gap-2 justify-evenly my-5 mx-4">
+                <ReviewSkeleton />
+                <ReviewSkeleton />
+                <ReviewSkeleton />
+                <ReviewSkeleton />
+            </div>
+        );
     }
     return (
         <>
