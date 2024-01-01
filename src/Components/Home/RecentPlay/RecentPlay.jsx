@@ -47,7 +47,7 @@ const RecentPlay = () => {
 
     return (
         <>
-            <section className="py-10 px-10 bg-primary text-white">
+            <section className="py-10 pt-0 px-10 bg-primary text-white">
                 <div className="container relative">
                     {/* Header section */}
                     <div className="flex justify-between">
