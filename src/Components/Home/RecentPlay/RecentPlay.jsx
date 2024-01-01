@@ -1,38 +1,24 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaFire } from "react-icons/fa";
 import CharacterPng1 from "../../../assets/character3.png";
-import Game1 from "../../../assets/game1.jpg";
-import Game2 from "../../../assets/game2.jpg";
-import Game3 from "../../../assets/game3.jpg";
 import useDataFetcher from "../../../hook/useDataFetcher";
 import Skleton from "../../shared/Skleton";
 
-const GameCardData = [
-    {
-        id: 4,
-        title: "Game Title3",
-        image: Game1,
-        followers: 35,
-    },
-    {
-        id: 5,
-        title: "Game Title4",
-        image: Game2,
-        followers: 35,
-    },
-    {
-        id: 6,
-        title: "Game Title5",
-        image: Game3,
-        followers: 55,
-    },
-];
 const RecentPlay = () => {
-    const { data, error, loading } = useDataFetcher("http://localhost:5000/recentplayed");
+    const [showAll, setShowAll] = useState(false);
+    const { data, error, loading, fetchData } = useDataFetcher("http://localhost:5000/recentplayed");
+
+    useEffect(() => {
+        if (showAll) {
+            fetchData("http://localhost:5000/recentplayed");
+        }
+    }, [showAll, fetchData]);
+
     if (loading) {
         return (
             <div className="flex gap-2 justify-evenly my-5 mx-4">
+                {/* Loading Skeletons */}
                 <Skleton />
                 <Skleton />
                 <Skleton />
@@ -46,6 +32,7 @@ const RecentPlay = () => {
     if (error) {
         return (
             <div className="flex gap-2 justify-evenly my-5 mx-4">
+                {/* Error Skeletons */}
                 <Skleton />
                 <Skleton />
                 <Skleton />
@@ -55,6 +42,9 @@ const RecentPlay = () => {
             </div>
         );
     }
+
+    const displayedData = showAll ? data : data.slice(0, 6);
+
     return (
         <>
             <section className="py-10 px-10 bg-primary text-white">
@@ -62,7 +52,10 @@ const RecentPlay = () => {
                     {/* Header section */}
                     <div className="flex justify-between">
                         <h1 className="text-3xl font-bold font-serif">Recent Played Games</h1>
-                        <button className="bg-gray-400/50 text-white rounded-xl px-4 py-2">
+                        <button
+                            className="bg-gray-400/50 text-white rounded-xl px-4 py-2"
+                            onClick={() => setShowAll(!showAll)}
+                        >
                             View All
                         </button>
                     </div>
@@ -70,24 +63,22 @@ const RecentPlay = () => {
                     <div className="relative z-10">
                         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mt-8">
                             {/* Game Card */}
-                            {data.slice(0, 6).map((item) => {
-                                return (
-                                    <div className="" key={item.id}>
-                                        <img
-                                            src={item.image}
-                                            alt={item.title}
-                                            className="w-full h-[200px] object-cover rounded-xl"
-                                        />
-                                        <div className="text-center">
-                                            <p>{item.title}</p>
-                                            <p className="flex items-center justify-center gap-2">
-                                                <FaFire />
-                                                <span>{item.followers}</span> followers
-                                            </p>
-                                        </div>
+                            {displayedData.map((item) => (
+                                <div className="" key={item.id}>
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="w-full h-[200px] object-cover rounded-xl"
+                                    />
+                                    <div className="text-center">
+                                        <p>{item.title}</p>
+                                        <p className="flex items-center justify-center gap-2">
+                                            <FaFire />
+                                            <span>{item.followers}</span> followers
+                                        </p>
                                     </div>
-                                );
-                            })}
+                                </div>
+                            ))}
                         </div>
                     </div>
 
