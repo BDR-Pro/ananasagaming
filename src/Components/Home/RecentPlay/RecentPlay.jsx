@@ -5,6 +5,8 @@ import CharacterPng1 from "../../../assets/character3.png";
 import Game1 from "../../../assets/game1.jpg";
 import Game2 from "../../../assets/game2.jpg";
 import Game3 from "../../../assets/game3.jpg";
+import useDataFetcher from "../../../hook/useDataFetcher";
+import Skleton from "../../shared/Skleton";
 
 const GameCardData = [
     {
@@ -27,6 +29,32 @@ const GameCardData = [
     },
 ];
 const RecentPlay = () => {
+    const { data, error, loading } = useDataFetcher("http://localhost:5000/recentplayed");
+    if (loading) {
+        return (
+            <div className="flex gap-2 justify-evenly my-5 mx-4">
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="flex gap-2 justify-evenly my-5 mx-4">
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+                <Skleton />
+            </div>
+        );
+    }
     return (
         <>
             <section className="py-10 px-10 bg-primary text-white">
@@ -42,7 +70,7 @@ const RecentPlay = () => {
                     <div className="relative z-10">
                         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mt-8">
                             {/* Game Card */}
-                            {GameCardData.map((item) => {
+                            {data.slice(0, 6).map((item) => {
                                 return (
                                     <div className="" key={item.id}>
                                         <img
