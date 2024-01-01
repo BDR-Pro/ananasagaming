@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaFire } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import CharacterPng1 from "../../../assets/character1.png";
@@ -7,7 +7,15 @@ import useDataFetcher from "../../../hook/useDataFetcher";
 import Skleton from "../../shared/Skleton";
 
 const TrendingGame = () => {
-    const { data, error, loading } = useDataFetcher("http://localhost:5000/trending")
+    const [showAll, setShowAll] = useState(false);
+    const { data, error, loading, fetchData } = useDataFetcher("http://localhost:5000/trending")
+
+    useEffect(() => {
+        if (showAll) {
+            fetchData("http://localhost:5000/trending");
+        }
+    }, [showAll, fetchData]);
+
     if (loading) {
         return (
             <div className="flex gap-2 justify-evenly my-5 mx-4">
@@ -33,6 +41,8 @@ const TrendingGame = () => {
             </div>
         );
     }
+
+    const displayedData = showAll ? data : data.slice(0, 7);
     return (
         <>
             <section className="py-10 px-10 bg-primary text-white">
@@ -40,7 +50,7 @@ const TrendingGame = () => {
                     {/* Header section */}
                     <div className="flex justify-between">
                         <h1 className="text-3xl font-bold font-serif">Currently Trending Games</h1>
-                        <button className="bg-gray-400/50 text-white rounded-xl px-4 py-2">
+                        <button className="bg-gray-400/50 text-white rounded-xl px-4 py-2" onClick={() => setShowAll(!showAll)}>
                             View All
                         </button>
                     </div>
@@ -48,7 +58,7 @@ const TrendingGame = () => {
                     <div className="relative z-10">
                         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mt-8">
                             {/* Game Card */}
-                            {data.map((item) => {
+                            {displayedData.map((item) => {
                                 return (
                                     <Link key={item.id} to={`/details/${item.id}`}>
                                         <div className="" key={item.id}>
