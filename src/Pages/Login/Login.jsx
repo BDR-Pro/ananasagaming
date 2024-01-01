@@ -9,7 +9,7 @@ const Login = () => {
     return (
         <div className="bg-primary text-white">
             <div className='h-[800px] flex justify-center items-center'>
-                <div className='w-96 p-7 border-2 backdrop-blur-xl text-white rounded-lg'>
+                <div className='w-96 p-7 border-2 bg-gray-700/50 text-white rounded-lg'>
                     <h2 className='text-xl text-center'>Login</h2>
                     <form >
                         <div className="form-control w-full max-w-xs">
