@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import GameDetails from "../Components/Details/gameDetails";
+import GameDetails from "../Components/Details/GameDetails";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
