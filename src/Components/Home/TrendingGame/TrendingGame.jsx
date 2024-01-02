@@ -45,12 +45,12 @@ const TrendingGame = () => {
     const displayedData = showAll ? data : data.slice(0, 7);
     return (
         <>
-            <section className="py-10 px-10 bg-primary text-white">
+            <section className="py-10 pt-0 px-3 md:px-10 bg-primary text-white">
                 <div className="container relative">
                     {/* Header section */}
                     <div className="flex justify-between">
-                        <h1 className="text-3xl font-bold font-serif">Currently Trending Games</h1>
-                        <button className="bg-gray-400/50 text-white rounded-xl px-4 py-2" onClick={() => setShowAll(!showAll)}>
+                        <h1 className="text-xl md:text-3xl font-bold font-serif">Currently Trending</h1>
+                        <button className="bg-gray-400/50 text-white rounded-xl px-2 py-1 md:px-4 md:py-2" onClick={() => setShowAll(!showAll)}>
                             View All
                         </button>
                     </div>

@@ -31,12 +31,12 @@ const StreamerReview = () => {
     }
     return (
         <>
-            <section className="py-10 px-10 bg-primary text-white">
+            <section className="py-10 px-3 md:px-10 bg-primary text-white">
                 <div className="container relative">
                     {/* Header section */}
                     <div className="flex justify-between">
-                        <h1 className="text-3xl font-bold font-serif">Reviews For The Streamer</h1>
-                        <button className="bg-gray-400/50 text-white rounded-xl px-4 py-2">
+                        <h1 className="text-[15px] md:text-3xl font-bold font-serif">Reviews For The Streamer</h1>
+                        <button className="bg-gray-400/50 text-white rounded-xl px-2 py-1 md:px-4 md:py-2">
                             View All
                         </button>
                     </div>

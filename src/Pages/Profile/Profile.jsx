@@ -5,7 +5,7 @@ import RecentPlay from '../../Components/Home/RecentPlay/RecentPlay';
 import StreamerReview from '../../Components/Home/Review/StreamerReview';
 const Profile = () => {
     return (
-        <div className='bg-primary  min-h-screen py-32 px-10 '>
+        <div className='bg-primary  min-h-screen py-16 md:py-32 px-2 md:px-10 '>
             <div className="card w-full bg-base-100 shadow-xl relative">
 
                 <div className="card w-[114px] shadow-xl absolute top-[270px] left-[33px] rounded-md border-2 border-green-900">
@@ -19,18 +19,18 @@ const Profile = () => {
                 <div className="card-body bg-primary text-white">
                     <div className="flex justify-between items-center">
                         <button className='btn btn-ghost btn-sm bg-slate-600 text-white'><FiEdit />Edit profile</button>
-                        <div className="flex gap-3">
+                        <div className="flex gap-2 md:gap-3">
                             <div className="flex flex-col items-center">
                                 <span className='font-semibold'>1</span>
-                                <span className='font-semibold'>Played</span>
+                                <span className='font-normal md:font-semibold text-sm md:text-md '>Played</span>
                             </div>
                             <div className="flex flex-col items-center">
                                 <span className='font-semibold'>21</span>
-                                <span className='font-semibold'>Listed Games</span>
+                                <span className='font-normal md:font-semibold text-sm md:text-md '>Listed Games</span>
                             </div>
                             <div className="flex flex-col items-center">
                                 <span className='font-semibold'>1345$</span>
-                                <span className='font-semibold'>Revenue</span>
+                                <span className='font-normal md:font-semibold text-sm md:text-md '>Revenue</span>
                             </div>
                         </div>
                     </div>

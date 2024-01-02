@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from "react";
 import { FaFire } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import CharacterPng1 from "../../../assets/character3.png";
 import useDataFetcher from "../../../hook/useDataFetcher";
 import Skleton from "../../shared/Skleton";
@@ -47,13 +48,13 @@ const RecentPlay = () => {
 
     return (
         <>
-            <section className="py-10 pt-0 px-10 bg-primary text-white">
+            <section className="py-10 pt-0 px-3 md:px-10 bg-primary text-white">
                 <div className="container relative">
                     {/* Header section */}
                     <div className="flex justify-between">
-                        <h1 className="text-3xl font-bold font-serif">Recent Played Games</h1>
+                        <h1 className="text-xl md:text-3xl font-bold font-serif">Recent Played Games</h1>
                         <button
-                            className="bg-gray-400/50 text-white rounded-xl px-4 py-2"
+                            className="bg-gray-400/50 text-white rounded-xl px-2 py-1 md:px-4 md:py-2"
                             onClick={() => setShowAll(!showAll)}
                         >
                             View All
@@ -63,22 +64,26 @@ const RecentPlay = () => {
                     <div className="relative z-10">
                         <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mt-8">
                             {/* Game Card */}
-                            {displayedData.map((item) => (
-                                <div className="" key={item.id}>
-                                    <img
-                                        src={item.image}
-                                        alt={item.title}
-                                        className="w-full h-[200px] object-cover rounded-xl"
-                                    />
-                                    <div className="text-center">
-                                        <p>{item.title}</p>
-                                        <p className="flex items-center justify-center gap-2">
-                                            <FaFire />
-                                            <span>{item.followers}</span> followers
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
+                            {displayedData.map((item) => {
+                                return (
+                                    <Link key={item.id} to={`/details/${item.id}`}>
+                                        <div className="" key={item.id}>
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="w-full h-[200px] object-cover rounded-xl"
+                                            />
+                                            <div className="text-center">
+                                                <p>{item.title}</p>
+                                                <p className="flex items-center justify-center gap-2">
+                                                    <FaFire />
+                                                    <span>{item.followers}</span> followers
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </div>
 

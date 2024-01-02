@@ -14,7 +14,7 @@ const HeroSlider = () => {
     const { data: gamesData, loading, error } = useDataFetcher("http://localhost:5000/games");
 
     if (loading) {
-        return <div className=""></div>;
+        return <div className="skeleton w-[94%] h-[600px] mb-30 mt-38 mx-auto"></div>;
     }
 
     if (error) {
