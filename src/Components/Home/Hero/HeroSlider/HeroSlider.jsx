@@ -11,7 +11,7 @@ import SliderCard from './../SliderCard';
 
 
 const HeroSlider = () => {
-    const { data: gamesData, loading, error } = useDataFetcher("http://localhost:5000/games");
+    const { data: gamesData, loading, error } = useDataFetcher("https://ananasagaming.onrender.com/games");
 
     if (loading) {
         return <div className="skeleton w-[94%] h-[600px] mb-30 mt-38 mx-auto"></div>;

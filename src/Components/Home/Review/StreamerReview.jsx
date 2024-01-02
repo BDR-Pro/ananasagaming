@@ -7,7 +7,7 @@ import useDataFetcher from "../../../hook/useDataFetcher";
 import ReviewSkeleton from "../../shared/ReviewSkeleton";
 
 const StreamerReview = () => {
-    const { data: reviews, error, loading } = useDataFetcher("http://localhost:5000/reviews");
+    const { data: reviews, error, loading } = useDataFetcher("https://ananasagaming.onrender.com/reviews");
     if (loading) {
         return (
             <div className="flex gap-2 justify-evenly my-5 mx-4">

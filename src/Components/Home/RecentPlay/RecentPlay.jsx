@@ -8,11 +8,11 @@ import Skleton from "../../shared/Skleton";
 
 const RecentPlay = () => {
     const [showAll, setShowAll] = useState(false);
-    const { data, error, loading, fetchData } = useDataFetcher("http://localhost:5000/recentplayed");
+    const { data, error, loading, fetchData } = useDataFetcher("https://ananasagaming.onrender.com/recentplayed");
 
     useEffect(() => {
         if (showAll) {
-            fetchData("http://localhost:5000/recentplayed");
+            fetchData("https://ananasagaming.onrender.com/recentplayed");
         }
     }, [showAll, fetchData]);
 

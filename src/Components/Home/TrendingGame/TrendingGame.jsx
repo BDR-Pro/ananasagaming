@@ -8,11 +8,11 @@ import Skleton from "../../shared/Skleton";
 
 const TrendingGame = () => {
     const [showAll, setShowAll] = useState(false);
-    const { data, error, loading, fetchData } = useDataFetcher("http://localhost:5000/trending")
+    const { data, error, loading, fetchData } = useDataFetcher("https://ananasagaming.onrender.com/trending")
 
     useEffect(() => {
         if (showAll) {
-            fetchData("http://localhost:5000/trending");
+            fetchData("https://ananasagaming.onrender.com/trending");
         }
     }, [showAll, fetchData]);
 

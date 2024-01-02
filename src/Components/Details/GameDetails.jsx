@@ -6,7 +6,7 @@ import GameDetailsCard from './GameDetailsCard';
 
 const GameDetails = () => {
     const { id } = useParams();
-    const { data: singleData, error, loading } = useDataFetcher(`http://localhost:5000/trending/${id}`);
+    const { data: singleData, error, loading } = useDataFetcher(`https://ananasagaming.onrender.com/trending/${id}`);
     if (loading) {
         return (
             <div className="flex flex-col gap-4 w-[94%] h-screen mb-30 mt-38 mx-auto">
